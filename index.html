@@ -14,9 +14,9 @@
             }
             .container {
                 max-width: 100vw;
-                height: 20vw;
+                height: clamp(1rem, 100vw, 25rem);
                 margin: auto;
-                background: #1a2dc4;
+                background: #0e54a0;
                 padding: 20px;
                 border-radius: 10px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -34,13 +34,12 @@
             }
             h1 {
                 color: white;
-                font-size: 100px;
+                font-size: clamp(1rem, 13vw, 10rem);
             }
             .ubs {
                 font-size: 50px;
                 font-weight: bold;
-                background: #3498db;
-                color: white;
+                color: #0e54a0;
                 padding: 10px;
                 border-radius: 5px;
                 display: inline-block;
@@ -48,10 +47,13 @@
             .grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 10px;
+                gap: 40px;
                 margin-top: 20px;
                 text-align: left;
                 padding: 15px;
+            }
+            .divimg {
+                text-align: center;
             }
             .grid div {
                 background: #ecf0f1;
@@ -66,28 +68,36 @@
                 text-align: center;
             }
             .outrotexto {
-                width: 100vw;
+                width: clamp(1rem, 60vw, 300rem);
                 font-size: 20px;
                 font-weight: bold;
-                background: #3498db;
+                background: #0e54a0;
                 color: white;
                 padding: 30px;
                 border-radius: 5px;
-                display: inline-block;
                 text-align: justify;
+                margin-top: 100px;
+            }
+            .o {
+                text-align: center;
+                align-items: center;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>O <strong> SUS</strong> que dá certo!<img src="./ze_gotinha.png" alt="Zé gotinha" width="200" height="200" style="margin-left: 40px; padding-left: 300px;"></h1>
+            <h1>O <strong> SUS</strong> que dá certo!
+                <img src="./ze_gotinha.png" alt="Zé gotinha" width="clamp(1rem, 10vw, 10rem)" height="clamp(1rem, 13vw, 10rem)" style="padding: 20px;">
+            </h1>
         </div>
         <div class="container1">    
             <div class="ubs">UBS 07 - Samambaia</div>
             <div class="grid">
 
                 <div> 
-                    <img src="./salavac.jpeg" alt="sala" width="350" height="350" style="margin-left: 40px;">
+                    <div class="divimg">
+                        <img src="./salavac.jpeg" alt="sala" style="width: 100%; max-width: 350px;height: 100%; max-height: 350px;">
+                    </div>
                     <div class="title"> INFORMAÇÕES</div>
                     <div style="padding-left: 20px;"> 
                     Horário de funcionamento: 08h até 18h30.<br> 
@@ -105,7 +115,9 @@
                 </div>
 
                 <div> 
-                    <img src="./graficovac.jpg" alt="Zé gotinha" width="350" height="350" style="margin-left: 40px;">
+                    <div class="divimg">
+                        <img src="./graficovac.jpg" alt="Zé gotinha"  style="width: 100%; max-width: 350px;height: 100%; max-height: 350px;">
+                    </div>
                     <div class="title"> UNIDADE QUE MAIS VACINA EM SAMAMBAIA</div>
                     <div style="padding-left: 20px;"> 
                     Segundo dados do portal Infosaúde-DF, a sala de vacina da UBS 7 de Samambaia é a que mais vacinou na região administrativa no período de 2024-2025. 
@@ -114,7 +126,9 @@
                 </div>
 
                 <div> 
-                    <img src="./itens_herois.jpg" alt="Zé gotinha" width="350" height="350" style="margin-left: 40px;">
+                    <div class="divimg">
+                        <img src="./itens_herois.jpg" alt="Zé gotinha" style="width: 100%; max-width: 350px;height: 100%; max-height: 350px;">
+                    </div>
                     <div class="title"> VACINA NAS ESCOLAS</div>
                     <div style="padding-left: 20px;">
                     A UBS 7 de Samambaia segue as orientações do Ministério da Saúde, realizando campanhas de vacinação nas escolas, ampliando o acesso desse direito tão importante.
@@ -122,7 +136,9 @@
                 </div>
 
                 <div>
-                    <img src="./crie_virtual.jpeg" alt="Zé gotinha" width="350" height="350" style="margin-left: 40px;">
+                    <div class="divimg">
+                        <img src="./crie_virtual.jpeg" alt="Zé gotinha" style="width: 100%; max-width: 350px;height: 100%; max-height: 350px;">
+                    </div>
                     <div class="title"> CRIE VIRTUAL</div>
                     <div style="padding-left: 20px;"> 
                     O Centro de Referência para Imunobiológicos Especiais (CRIE) virtual é um sistema que permite às pessoas que necessitam de vacinas especiais não disponíveis no calendário básico de vacinação, tenham acesso a esses insumos pelo SUS. Nossa unidade possui um CRIE virtual. Foi a primeira unidade de Samambaia a implementar esse sistema, como um teste para a rede. Se você tem alguma condição especial, é possível solicitar avaliação na unidade pelo QR code da imagem.
@@ -130,10 +146,10 @@
                     </div>
                 </div>
             </div>
-            <div class="outrotexto">
-                Esse site é um projeto para reforçar a importância de um SUS que dá certo. Sabe-se que o Brasil é referência para vacinação, mas também é importante ressaltar e valorizar o serviço dos funcionários responsáveis por fazerem a sala de vacinação dar certo na esfera regional. 
-
-<br><br>O projeto foi realizado como uma intervenção de Humanização, de acordo com  as diretrizes da Política Nacional de Humanização, do Ministério da Saúde. A intervenção faz parte do programa de residência médica desenvolvida na unidade. </div>
+                <div class="outrotexto">
+                    Esse site é um projeto para reforçar a importância de um SUS que dá certo. Sabe-se que o Brasil é referência para vacinação, mas também é importante ressaltar e valorizar o serviço dos funcionários responsáveis por fazer a sala de vacinação dar certo na esfera regional. 
+                    <br><br>O projeto foi realizado como uma intervenção de Humanização, de acordo com  as diretrizes da Política Nacional de Humanização, do Ministério da Saúde. A intervenção faz parte do programa de residência médica desenvolvida na unidade. 
+                </div>
         </div>
     </body>
 </html>
